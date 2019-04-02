@@ -32,7 +32,11 @@ export class ConversorComponent implements OnInit {
   }
 
   converter(): void {
-    if (this.conversaoForm.form.valid)
-      alert('Convertendo: ' + JSON.stringify(this.conversao))
+    if (this.conversaoForm.form.valid) {
+      this.conversorService
+              .converter(this.conversao)
+              .subscribe(response => this.resposta = response, 
+                         error => this.possuiErro = true)
+    }
   }
 }

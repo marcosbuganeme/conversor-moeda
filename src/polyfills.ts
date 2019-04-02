@@ -61,3 +61,5 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+ import 'rxjs/add/operator/map'
+ import 'rxjs/add/operator/catch'
